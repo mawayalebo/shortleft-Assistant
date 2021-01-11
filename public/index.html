@@ -12,9 +12,72 @@
         <title>SHORTLEFT ASSISTANT</title>
     </head>
     <body>
-        <div class="container center">
-            <h1>WELCOME TO SHORTLEFT ASSISTANT</h1>
-            <h3>your front seat assistant</h3>
+        <div class="navbar-fixed">
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center valign-center">SHORTLEFT</a>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-content center">
+                    <div class="card-title">
+                        <h5 class="">4Local Mode</h5>
+                    </div>
+                    <div class="container hide-on-med-and-down">
+                        <form >
+                            <div class="input-field">
+                                <input type="number" name="" id="taxiFare">
+                                <label for="input-field">Taxi Fare</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="number" name="" id="amountHanded">
+                                <label for="input-field">Amonut Handed</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="number" name="" id="noPassenger">
+                                <label for="input-field">Number of Passengers</label>
+                            </div>
+                            <div class="row">
+                                <div class="center col s12 m12 l12"></div>
+                                <a class="waves-effect waves-light btn-large col s12 m12 l12">Change</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="container hide-on-large-only">
+                        <form>
+                            <div class="container taxifare-content">
+                                <label for="range-field">Taxi Fare</label>
+                            <p class="range-field">
+                                <input type="range" name="" id="taxifaRE" min="5" max="50">
+                            </p>
+                            <span id="taxiFareOut"></span>
+                            </div>
+
+                            <div class="container amoundhanded-content">
+                                <label for="range-field">Amount Handed</label>
+                            <p class="range-field">
+                                <input type="range" name="" id="amountHanded" min="5" max="200">
+                            </p>
+                            <span id="amountHandedOut"></span>
+                            </div>
+
+                            <div class="container noPassenger-content">
+                                <label for="range-field">Number of Passengers</label>
+                            <p class="range-field">
+                                <input type="range" name="" id="noPassenger" min="1" max="22">
+                            </p>
+                            <span id="noPassengerOut"></span>
+                            </div>
+                            <div class="row">
+                                <div class="center col s12 m12 l12"></div>
+                                <a class="waves-effect waves-light btn-large col s12 m12 l12">Change</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="./index.js"></script>
     </body>
