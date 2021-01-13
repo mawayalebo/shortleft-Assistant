@@ -28,56 +28,64 @@
                     <div class="container hide-on-med-and-down">
                         <form >
                             <div class="input-field">
-                                <input type="number" name="" id="taxiFare">
+                                <input type="number" name="" id="taxiFare" value="10">
                                 <label for="input-field">Taxi Fare</label>
                             </div>
                             <div class="input-field">
-                                <input type="number" name="" id="amountHanded">
-                                <label for="input-field">Amonut Handed</label>
+                                <input type="number" name="" id="amountHanded" value="50">
+                                <label for="input-field">Amount Handed</label>
                             </div>
                             <div class="input-field">
-                                <input type="number" name="" id="noPassenger">
+                                <input type="number" name="" id="noPassenger" value="3">
                                 <label for="input-field">Number of Passengers</label>
                             </div>
                             <div class="row">
-                                <div class="center col s12 m12 l12"></div>
-                                <a class="waves-effect waves-light btn-large col s12 m12 l12">Change</a>
+                                <button id="changeButton" class="waves-effect waves-light btn-large col s12 m12 l12">Change</button>
                             </div>
                         </form>
                     </div>
+                    
                     <div class="container hide-on-large-only">
                         <form>
                             <div class="container taxifare-content">
                                 <label for="range-field">Taxi Fare</label>
                             <p class="range-field">
-                                <input type="range" name="" id="taxifaRE" min="5" max="50">
+                                <input type="range" name="" id="taxiFareSlider" min="5" max="50">
                             </p>
-                            <span id="taxiFareOut"></span>
+                            <span  id="taxiFareOut"></span>
                             </div>
 
                             <div class="container amoundhanded-content">
                                 <label for="range-field">Amount Handed</label>
                             <p class="range-field">
-                                <input type="range" name="" id="amountHanded" min="5" max="200">
+                                <input type="range" name="" id="amountHandedSlider" min="5" max="200">
                             </p>
-                            <span id="amountHandedOut"></span>
+                            <span  id="amountHandedOut"></span>
                             </div>
 
                             <div class="container noPassenger-content">
                                 <label for="range-field">Number of Passengers</label>
                             <p class="range-field">
-                                <input type="range" name="" id="noPassenger" min="1" max="22">
+                                <input type="range" name="" id="noPassengerSlider" min="1" max="22">
                             </p>
                             <span id="noPassengerOut"></span>
                             </div>
                             <div class="row">
-                                <div class="center col s12 m12 l12"></div>
-                                <a class="waves-effect waves-light btn-large col s12 m12 l12">Change</a>
+                                <a id="changeSliderButton" class="waves-effect waves-light btn-large col s12 m12 l12">Change</a>
                             </div>
                         </form>
                     </div>
                 </div>
+
             </div>
+        </div>
+        <div Style="display:none" id="recentContainer">
+            <div class="container">
+                <h3>RECENT</h3>
+                <hr>
+                <div id="recentOut"></div>
+            </div>
+            
         </div>
         <script src="./index.js"></script>
     </body>
