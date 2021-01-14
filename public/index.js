@@ -18,6 +18,8 @@ var dataId = 0;
 var recentOut = document.querySelector('#recentOut');
 var recentContainer = document.querySelector('#recentContainer');
 
+var lock = document.querySelector("#lock");
+
 taxiFareSlider.oninput = ()=>{
     taxiFareOut.innerHTML = taxiFareSlider.value;
 };
@@ -36,9 +38,6 @@ var change = ( taxiFare, amountHanded, noPassenger)=>{
 
 };
 
-const cancelRecent = (e)=>{
-    console.log(e.target);
-}
 
 changeButton.onclick =(e)=>{
     e.preventDefault();
@@ -56,16 +55,25 @@ changeButton.onclick =(e)=>{
         }
         const mappedData = changeData.map(data=>{
             return(`
-                <div onclick="${cancelRecent}" class="center hoverable grey-text" key=${data.id}>
-                    <a onclick="()=>{ console.log('hello');}">
-                    <p>the change for ${data.noPassenger} ${who} who handed R${data.amountHanded} is R${data.change}</p>
-                    </a>
+                <div class="center hoverable grey-text" key=${data.id}>
+                    <p>${data.id} - the change for ${data.noPassenger} ${who} who handed R${data.amountHanded} is R${data.change}</p>
                 </div>
             `);
         })
-        
         recentOut.innerHTML = mappedData;
     }
 
 };
+
+lock.addEventListener('click',(e)=>{
+    console.log(e.target.id);
+    if(e.target.id == 'lock'){
+        lock.innerHTML = `<i id="lockOpen"class="small material-icons">lock_open</i>`;
+        taxiFare.setAttribute("disabled","");
+        console.log(taxiFare);
+    }else{
+        lock.innerHTML = `<i id="lock" class="small material-icons">lock</i>`;
+        taxiFare.removeAttribute("disabled");
+    };
+});
 
