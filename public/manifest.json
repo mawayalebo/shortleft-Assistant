@@ -1,0 +1,34 @@
+{
+    "name":"Shortleft Assistant",
+    "short_name": "ShortleftAssistant",
+    "start_url":"/index.html",
+    "display":"standalone",
+    "background_color":"teal",
+    "theme_color":"teal",
+    "orientation": "portrait-primary",
+    "icons":[
+        {
+            "src":"/assets/Artboard 1.png",
+            "type":"img/png",
+            "sizes":"144x144"
+        },
+        {
+            "src":"/assets/Artboard 2.png",
+            "type":"img/png",
+            "sizes":"128x128"
+        },
+        {
+            "src":"/assets/Artboard 3.png",
+            "type":"img/png",
+            "sizes":"96x96"
+        },
+        {
+            "src":"/assets/Artboard 4.png",
+            "type":"img/png",
+            "sizes":"72x72"
+        }
+    ]
+    
+    
+
+}
